@@ -2,13 +2,11 @@ services:
   db:
     image: postgres:16-alpine
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: hirify
-    ports:
-      - "5432:5432"
+      POSTGRES_USER: ${POSTGRES_USER:-messenger}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-messenger}
+      POSTGRES_DB: ${POSTGRES_DB:-messenger}
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres -d hirify"]
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-messenger} -d ${POSTGRES_DB:-messenger}"]
       interval: 2s
       timeout: 2s
       retries: 30
@@ -19,7 +17,7 @@ services:
       db:
         condition: service_healthy
     environment:
-      DATABASE_DSN: postgres://postgres:postgres@db:5432/hirify?sslmode=disable
+      DATABASE_DSN: postgres://${POSTGRES_USER:-messenger}:${POSTGRES_PASSWORD:-messenger}@db:5432/${POSTGRES_DB:-messenger}?sslmode=disable
       MIGRATIONS_DIR: /app/migrations
       SERVICE_NAME: messenger-test
     command: ["/app/migrate"]
@@ -32,7 +30,7 @@ services:
         condition: service_completed_successfully
     environment:
       HTTP_ADDR: :8080
-      DATABASE_DSN: postgres://postgres:postgres@db:5432/hirify?sslmode=disable
+      DATABASE_DSN: postgres://${POSTGRES_USER:-messenger}:${POSTGRES_PASSWORD:-messenger}@db:5432/${POSTGRES_DB:-messenger}?sslmode=disable
       MIGRATIONS_DIR: /app/migrations
       SERVICE_NAME: messenger-test
     ports:

@@ -15,7 +15,7 @@ func FromEnv() Config {
 	return Config{
 		ServiceName:   getEnv("SERVICE_NAME", "messenger-test"),
 		HTTPAddr:      getEnv("HTTP_ADDR", ":8080"),
-		DatabaseDSN:   getEnv("DATABASE_DSN", "postgres://postgres:postgres@localhost:5432/hirify?sslmode=disable"),
+		DatabaseDSN:   getEnv("DATABASE_DSN", "postgres://messenger:messenger@localhost:5432/messenger?sslmode=disable"),
 		MigrationsDir: getEnv("MIGRATIONS_DIR", "migrations"),
 	}
 }
