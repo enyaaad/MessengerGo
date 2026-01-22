@@ -6,7 +6,7 @@
 
 ```bash
 cd hirifyGOTest
-docker compose up --build
+docker compose up --build || make up
 ```
 
 Сервис поднимется на `http://localhost:8080`.

@@ -7,5 +7,5 @@ down:
 	docker compose down -v
 
 test:
-	tgo test ./...
+	go test ./...
 
