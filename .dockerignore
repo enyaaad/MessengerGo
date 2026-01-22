@@ -1,0 +1,10 @@
+.git
+.idea
+.vscode
+**/*.log
+**/*_test.go
+tmp
+bin
+dist
+node_modules
+
