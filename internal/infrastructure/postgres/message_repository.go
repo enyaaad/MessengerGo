@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"hirifyGOTest/internal/domain/chat"
+	"messengerTest/internal/domain/chat"
 
 	"gorm.io/gorm"
 )

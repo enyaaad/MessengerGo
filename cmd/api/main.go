@@ -9,11 +9,11 @@ import (
 	"syscall"
 	"time"
 
-	"hirifyGOTest/internal/app"
-	"hirifyGOTest/internal/config"
-	httpapi "hirifyGOTest/internal/delivery/httpapi"
-	"hirifyGOTest/internal/infrastructure/postgres"
-	"hirifyGOTest/pkg/logging"
+	"messengerTest/internal/app"
+	"messengerTest/internal/config"
+	httpapi "messengerTest/internal/delivery/httpapi"
+	"messengerTest/internal/infrastructure/postgres"
+	"messengerTest/pkg/logging"
 
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 )

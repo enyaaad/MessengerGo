@@ -3,7 +3,7 @@ package httpapi
 import (
 	"context"
 
-	"hirifyGOTest/internal/domain/chat"
+	"messengerTest/internal/domain/chat"
 )
 
 type ChatService interface {

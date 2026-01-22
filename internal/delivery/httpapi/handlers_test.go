@@ -10,8 +10,8 @@ import (
 	"testing"
 	"time"
 
-	"hirifyGOTest/internal/app"
-	"hirifyGOTest/internal/domain/chat"
+	"messengerTest/internal/app"
+	"messengerTest/internal/domain/chat"
 
 	"github.com/rs/zerolog"
 	"github.com/stretchr/testify/require"

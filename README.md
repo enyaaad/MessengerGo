@@ -1,11 +1,11 @@
-# hirifyGOTest — API чатов и сообщений (Go)
+# messengerTest — API чатов и сообщений (Go)
 
 Сервис для тестового задания: **чаты** и **сообщения**.
 
 ## Запуск
 
 ```bash
-cd hirifyGOTest
+cd messengerTest
 docker compose up --build || make up
 ```
 

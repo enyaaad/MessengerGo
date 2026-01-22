@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"os"
 
-	"hirifyGOTest/internal/config"
-	"hirifyGOTest/pkg/logging"
+	"messengerTest/internal/config"
+	"messengerTest/pkg/logging"
 
 	_ "github.com/jackc/pgx/v5/stdlib"
 	"github.com/pressly/goose/v3"

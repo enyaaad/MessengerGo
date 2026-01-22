@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"time"
 
-	"hirifyGOTest/pkg/metrics"
+	"messengerTest/pkg/metrics"
 )
 
 func MetricsMiddleware(next http.Handler) http.Handler {

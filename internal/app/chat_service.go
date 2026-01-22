@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"strings"
 
-	"hirifyGOTest/internal/domain/chat"
+	"messengerTest/internal/domain/chat"
 )
 
 type ChatService struct {

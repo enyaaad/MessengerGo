@@ -18,7 +18,7 @@ COPY --from=build /out/api /app/api
 COPY --from=build /out/migrate /app/migrate
 COPY migrations /app/migrations
 
-ENV SERVICE_NAME=hirify-go-test
+ENV SERVICE_NAME=messenger-test
 ENV HTTP_ADDR=:8080
 ENV MIGRATIONS_DIR=/app/migrations
 
